@@ -10,3 +10,6 @@ This repository contains the backend for the asimov project
 * Gabriel Eugenio de la Puente Bozzo - U201913572
 * Yordy Rolando Mochcco Atauje - U201923959
 * José Rodrigo Lopez Flores - U201910421
+
+## Documentation
+* version 0.0.1 - 22/04/2022
