@@ -12,7 +12,6 @@ using Microsoft.AspNetCore.Mvc;
 namespace Asimov.API.Directors.Controllers
 {
     [Produces("application/json")]
-    [AuthorizeDirector]
     [ApiController]
     [Route("/api/v1/[controller]")]
     public class DirectorsController : ControllerBase
