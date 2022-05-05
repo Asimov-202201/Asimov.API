@@ -40,8 +40,8 @@ namespace Asimov.API.Test.AnnouncementTests
         public static void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "AnnouncementTests", "AnnouncementServiceTests", "As a Developer\r\nI want to add new Announcement through API\r\nSo that It can be ava" +
-                    "ilable for applications.", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "AnnouncementTests", "AnnouncementServiceTests", "As a Director\r\nI want to add new Announcement through Application\r\nSo that It can" +
+                    " be available to all teachers", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         

@@ -1,7 +1,7 @@
 ﻿Feature: ItemServiceTests
 As a Director
-I want to add new Item through API
-So that It can be available for applications.
+I want to add new Item through application
+So that It can be available to all teachers
 	
     Background:
         Given the Endpoint https://localhost:5001/api/v1/items is available

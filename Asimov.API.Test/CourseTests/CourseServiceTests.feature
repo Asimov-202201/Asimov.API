@@ -1,7 +1,7 @@
 ﻿Feature: CourseServiceTests
-As a Developer
-I want to add new Course through API
-So that It can be available for applications.
+As a Director
+I want to add new Course through application
+So that It can be available to all teachers
 
     Background: 
         Given the Endpoint https://localhost:5001/api/v1/courses is available

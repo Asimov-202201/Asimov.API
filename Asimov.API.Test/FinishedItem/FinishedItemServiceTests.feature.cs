@@ -40,8 +40,8 @@ namespace Asimov.API.Test.FinishedItem
         public static void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "FinishedItem", "FinishedItemServiceTests", "As a Teacher\r\nI want to complete an Item through API\r\nSo that It can be available" +
-                    " for applications.", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "FinishedItem", "FinishedItemServiceTests", "As a Teacher\r\nI want to complete an Item through application\r\nSo that I can see t" +
+                    "he progress of a course", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         

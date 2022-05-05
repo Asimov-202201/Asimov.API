@@ -1,7 +1,7 @@
 ﻿Feature: FinishedItemServiceTests
 As a Teacher
-I want to complete an Item through API
-So that It can be available for applications.
+I want to complete an Item through application
+So that I can see the progress of a course
 
     Background: 
         Given the Endpoint https://localhost:5001/api/v1/items is available for FinishedItemServiceTests

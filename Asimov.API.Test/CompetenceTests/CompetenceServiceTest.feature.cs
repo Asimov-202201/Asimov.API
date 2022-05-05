@@ -40,8 +40,8 @@ namespace Asimov.API.Test.CompetenceTests
         public static void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "CompetenceTests", "CompetenceServiceTests", "As a Director\r\nI want to add new Compentence through API\r\nSo that It can be avail" +
-                    "able for applications.", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "CompetenceTests", "CompetenceServiceTests", "As a Director\r\nI want to add new Compentence through application\r\nSo that It can " +
+                    "be available to all teachers", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         

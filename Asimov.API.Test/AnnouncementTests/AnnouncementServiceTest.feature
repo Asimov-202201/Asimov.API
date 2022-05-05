@@ -1,7 +1,7 @@
 ﻿Feature: AnnouncementServiceTests
-As a Developer
-I want to add new Announcement through API
-So that It can be available for applications.
+As a Director
+I want to add new Announcement through Application
+So that It can be available to all teachers
 
     Background:
         Given the Endpoint https://localhost:5001/api/v1/announcements is available

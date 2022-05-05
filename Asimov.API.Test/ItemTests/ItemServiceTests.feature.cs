@@ -40,8 +40,8 @@ namespace Asimov.API.Test.ItemTests
         public static void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "ItemTests", "ItemServiceTests", "As a Director\r\nI want to add new Item through API\r\nSo that It can be available fo" +
-                    "r applications.", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "ItemTests", "ItemServiceTests", "As a Director\r\nI want to add new Item through application\r\nSo that It can be avai" +
+                    "lable to all teachers", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
