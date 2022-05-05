@@ -28,4 +28,12 @@
       <ProjectReference Include="..\Asimov.API\Asimov.API.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <UpToDateCheckInput Remove="ItemTests\ItemServiceTests.feature" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <UpToDateCheckBuild Remove="ItemTests\ItemServiceTests.feature.cs" />
+    </ItemGroup>
+
 </Project>
