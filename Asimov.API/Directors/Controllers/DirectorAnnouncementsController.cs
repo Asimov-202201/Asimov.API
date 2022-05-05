@@ -11,8 +11,6 @@ namespace Asimov.API.Directors.Controllers
 {
     [Produces("application/json")]
     [ApiController]
-    [AuthorizeDirector]
-    [AuthorizeTeacher]
     [Route("/api/v1/directors/{directorId}/announcements")]
     public class DirectorAnnouncementsController : ControllerBase
     {
