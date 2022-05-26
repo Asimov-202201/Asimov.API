@@ -5,7 +5,7 @@
 	
 	Background: 
 		Given the Endpoint https://localhost:5001/api/v1/directors is available
-		And A Director is already stored in Director's Data
+		And A Director is already stored in Director's Data Base
 		  | FirstName | LastName | Age | Email           | Password | Phone     |
 		  | Julio     | Salazar  | 22  | julio@gmail.com | yulius15 | 987654321 |
 

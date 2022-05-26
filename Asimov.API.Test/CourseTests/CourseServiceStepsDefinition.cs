@@ -13,7 +13,7 @@ using TechTalk.SpecFlow;
 using TechTalk.SpecFlow.Assist;
 using Xunit;
 
-namespace Asimov.API.Test.CourseTests
+namespace Asimov.API.Tests.CourseTests
 {
     [Binding]
     public class CourseServiceStepsDefinition

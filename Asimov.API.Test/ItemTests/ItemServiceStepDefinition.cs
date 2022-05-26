@@ -14,7 +14,7 @@ using TechTalk.SpecFlow;
 using TechTalk.SpecFlow.Assist;
 using Xunit;
 
-namespace Asimov.API.Test.ItemTests
+namespace Asimov.API.Tests.ItemTests
 {
     [Binding]
     public class ItemServiceStepDefinition
@@ -38,7 +38,7 @@ namespace Asimov.API.Test.ItemTests
             Client = _factory.CreateClient(new WebApplicationFactoryClientOptions {BaseAddress = BaseUri});
         }
 
-        [Given(@"A Course is already stored")]
+        [When(@"A Course is already stored")]
         public async void GivenACourseIsAlreadyStored(Table existingCourseResource)
         {
             var courseUri = new Uri("https://localhost:5001/api/v1/courses");
@@ -49,7 +49,7 @@ namespace Asimov.API.Test.ItemTests
             var existingCourse = JsonConvert.DeserializeObject<CourseResource>(courseResponseData);
             Course = existingCourse;
         }
-
+        //Scenario Add Item
         [When(@"A Post Request is sent to Item")]
         public void WhenAPostRequestIsSentToItem(Table saveItemResource)
         {
@@ -77,7 +77,7 @@ namespace Asimov.API.Test.ItemTests
             var jsonActualResource = resource.ToJson();
             Assert.Equal(jsonExpectedResource, jsonActualResource);
         }
-
+        //Scenario Add Item with Invalid Course
         [Then(@"A message of (.*) is included in Response Body")]
         public async void ThenAMessageOfIsIncludedInResponseBody(string expectedMessage)
         {

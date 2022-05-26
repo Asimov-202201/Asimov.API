@@ -10,7 +10,7 @@
 // ------------------------------------------------------------------------------
 #region Designer generated code
 #pragma warning disable
-namespace Asimov.API.Test.EditDirectorTests
+namespace Asimov.API.Tests.EditDirectorTests
 {
     using TechTalk.SpecFlow;
     using System;
@@ -31,7 +31,7 @@ namespace Asimov.API.Test.EditDirectorTests
 #line 1 "EditDirectorServiceTest.feature"
 #line hidden
         
-        public EditDirectorServiceTestFeature(EditDirectorServiceTestFeature.FixtureData fixtureData, Asimov_API_Test_XUnitAssemblyFixture assemblyFixture, Xunit.Abstractions.ITestOutputHelper testOutputHelper)
+        public EditDirectorServiceTestFeature(EditDirectorServiceTestFeature.FixtureData fixtureData, Asimov_API_Tests_XUnitAssemblyFixture assemblyFixture, Xunit.Abstractions.ITestOutputHelper testOutputHelper)
         {
             this._testOutputHelper = testOutputHelper;
             this.TestInitialize();
@@ -83,14 +83,14 @@ namespace Asimov.API.Test.EditDirectorTests
 #line 7
   testRunner.Given("the Endpoint https://localhost:5001/api/v1/directors is available", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-            TechTalk.SpecFlow.Table table9 = new TechTalk.SpecFlow.Table(new string[] {
+            TechTalk.SpecFlow.Table table8 = new TechTalk.SpecFlow.Table(new string[] {
                         "FirstName",
                         "LastName",
                         "Age",
                         "Email",
                         "Password",
                         "Phone"});
-            table9.AddRow(new string[] {
+            table8.AddRow(new string[] {
                         "Julio",
                         "Salazar",
                         "22",
@@ -98,7 +98,7 @@ namespace Asimov.API.Test.EditDirectorTests
                         "yulius15",
                         "987654321"});
 #line 8
-  testRunner.And("A Director is already stored in Director\'s Data", ((string)(null)), table9, "And ");
+  testRunner.And("A Director is already stored in Director\'s Data Base", ((string)(null)), table8, "And ");
 #line hidden
         }
         
@@ -140,14 +140,14 @@ namespace Asimov.API.Test.EditDirectorTests
 #line 6
  this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table10 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table9 = new TechTalk.SpecFlow.Table(new string[] {
                             "FirstName",
                             "LastName",
                             "Age",
                             "Email",
                             "Password",
                             "Phone"});
-                table10.AddRow(new string[] {
+                table9.AddRow(new string[] {
                             "Julio",
                             "Zapata",
                             "22",
@@ -155,7 +155,7 @@ namespace Asimov.API.Test.EditDirectorTests
                             "yulius15",
                             "987654321"});
 #line 14
-  testRunner.When("A Update Request to Director 1 profile is sent", ((string)(null)), table10, "When ");
+  testRunner.When("A Update Request to Director 1 profile is sent", ((string)(null)), table9, "When ");
 #line hidden
 #line 17
   testRunner.Then("A Response with Status 200 is received a Director", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");

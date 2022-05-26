@@ -10,7 +10,7 @@
 // ------------------------------------------------------------------------------
 #region Designer generated code
 #pragma warning disable
-namespace Asimov.API.Test.CourseTests
+namespace Asimov.API.Tests.CourseTests
 {
     using TechTalk.SpecFlow;
     using System;
@@ -31,7 +31,7 @@ namespace Asimov.API.Test.CourseTests
 #line 1 "CourseServiceTests.feature"
 #line hidden
         
-        public CourseServiceTestsFeature(CourseServiceTestsFeature.FixtureData fixtureData, Asimov_API_Test_XUnitAssemblyFixture assemblyFixture, Xunit.Abstractions.ITestOutputHelper testOutputHelper)
+        public CourseServiceTestsFeature(CourseServiceTestsFeature.FixtureData fixtureData, Asimov_API_Tests_XUnitAssemblyFixture assemblyFixture, Xunit.Abstractions.ITestOutputHelper testOutputHelper)
         {
             this._testOutputHelper = testOutputHelper;
             this.TestInitialize();
@@ -40,8 +40,8 @@ namespace Asimov.API.Test.CourseTests
         public static void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "CourseTests", "CourseServiceTests", "As a Director\r\nI want to add new Course through application\r\nSo that It can be av" +
-                    "ailable to all teachers", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "CourseTests", "CourseServiceTests", "\tAs a Developer\r\n\tI want to add new Course through API\r\n\tSo that It can be availa" +
+                    "ble for applications.", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -79,9 +79,9 @@ namespace Asimov.API.Test.CourseTests
         public virtual void FeatureBackground()
         {
 #line 6
-    #line hidden
+ #line hidden
 #line 7
-        testRunner.Given("the Endpoint https://localhost:5001/api/v1/courses is available", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+  testRunner.Given("the Endpoint https://localhost:5001/api/v1/courses is available", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
         }
         
@@ -101,7 +101,7 @@ namespace Asimov.API.Test.CourseTests
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Add Course", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
 #line 10
-    this.ScenarioInitialize(scenarioInfo);
+this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
             bool isFeatureIgnored = default(bool);
@@ -121,32 +121,32 @@ namespace Asimov.API.Test.CourseTests
             {
                 this.ScenarioStart();
 #line 6
-    this.FeatureBackground();
+ this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table7 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table3 = new TechTalk.SpecFlow.Table(new string[] {
                             "Name",
                             "Description",
                             "State"});
-                table7.AddRow(new string[] {
+                table3.AddRow(new string[] {
                             "Algebra",
                             "A branch of Mathematics...",
                             "true"});
 #line 11
-        testRunner.When("A Post Request is sent to Course", ((string)(null)), table7, "When ");
+ testRunner.When("A Post Request is sent to Course", ((string)(null)), table3, "When ");
 #line hidden
 #line 14
-        testRunner.Then("A Response with Status 200 is received in Course", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+  testRunner.Then("A Response with Status 200 is received in Course", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-                TechTalk.SpecFlow.Table table8 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table4 = new TechTalk.SpecFlow.Table(new string[] {
                             "Name",
                             "Description",
                             "State"});
-                table8.AddRow(new string[] {
+                table4.AddRow(new string[] {
                             "Algebra",
                             "A branch of Mathematics...",
                             "true"});
 #line 15
-        testRunner.And("A Course Resource is included in Response Body", ((string)(null)), table8, "And ");
+  testRunner.And("A Course Resource is included in Response Body", ((string)(null)), table4, "And ");
 #line hidden
             }
             this.ScenarioCleanup();

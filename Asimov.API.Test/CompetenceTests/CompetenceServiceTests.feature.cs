@@ -10,7 +10,7 @@
 // ------------------------------------------------------------------------------
 #region Designer generated code
 #pragma warning disable
-namespace Asimov.API.Test.CompetenceTests
+namespace Asimov.API.Tests.CompetenceTests
 {
     using TechTalk.SpecFlow;
     using System;
@@ -28,10 +28,10 @@ namespace Asimov.API.Test.CompetenceTests
         
         private Xunit.Abstractions.ITestOutputHelper _testOutputHelper;
         
-#line 1 "CompetenceServiceTest.feature"
+#line 1 "CompetenceServiceTests.feature"
 #line hidden
         
-        public CompetenceServiceTestsFeature(CompetenceServiceTestsFeature.FixtureData fixtureData, Asimov_API_Test_XUnitAssemblyFixture assemblyFixture, Xunit.Abstractions.ITestOutputHelper testOutputHelper)
+        public CompetenceServiceTestsFeature(CompetenceServiceTestsFeature.FixtureData fixtureData, Asimov_API_Tests_XUnitAssemblyFixture assemblyFixture, Xunit.Abstractions.ITestOutputHelper testOutputHelper)
         {
             this._testOutputHelper = testOutputHelper;
             this.TestInitialize();
@@ -40,8 +40,8 @@ namespace Asimov.API.Test.CompetenceTests
         public static void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "CompetenceTests", "CompetenceServiceTests", "As a Director\r\nI want to add new Compentence through application\r\nSo that It can " +
-                    "be available to all teachers", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "CompetenceTests", "CompetenceServiceTests", "    As a Developer\r\n    I want to add new Compentence through API\r\n    So that It" +
+                    " can be available for applications.", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -101,7 +101,7 @@ namespace Asimov.API.Test.CompetenceTests
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Add Competence", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
 #line 10
-    this.ScenarioInitialize(scenarioInfo);
+this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
             bool isFeatureIgnored = default(bool);
@@ -123,26 +123,26 @@ namespace Asimov.API.Test.CompetenceTests
 #line 6
     this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table5 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
                             "Title",
                             "Description"});
-                table5.AddRow(new string[] {
+                table1.AddRow(new string[] {
                             "Digital Competence",
                             "The student is capable of..."});
 #line 11
-        testRunner.When("A Post Request to Competence is sent", ((string)(null)), table5, "When ");
+    testRunner.When("A Post Request to Competence is sent", ((string)(null)), table1, "When ");
 #line hidden
 #line 14
-        testRunner.Then("A Response with Status 200 is received in Competence", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+    testRunner.Then("A Response with Status 200 is received in Competence", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-                TechTalk.SpecFlow.Table table6 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
                             "Title",
                             "Description"});
-                table6.AddRow(new string[] {
+                table2.AddRow(new string[] {
                             "Digital Competence",
                             "The student is capable of..."});
 #line 15
-        testRunner.And("A Competence Resource is included in Response body", ((string)(null)), table6, "And ");
+    testRunner.And("A Competence Resource is included in Response body", ((string)(null)), table2, "And ");
 #line hidden
             }
             this.ScenarioCleanup();

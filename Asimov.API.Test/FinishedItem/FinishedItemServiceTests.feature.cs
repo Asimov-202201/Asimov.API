@@ -10,7 +10,7 @@
 // ------------------------------------------------------------------------------
 #region Designer generated code
 #pragma warning disable
-namespace Asimov.API.Test.FinishedItem
+namespace Asimov.API.Tests.FinishedItem
 {
     using TechTalk.SpecFlow;
     using System;
@@ -31,7 +31,7 @@ namespace Asimov.API.Test.FinishedItem
 #line 1 "FinishedItemServiceTests.feature"
 #line hidden
         
-        public FinishedItemServiceTestsFeature(FinishedItemServiceTestsFeature.FixtureData fixtureData, Asimov_API_Test_XUnitAssemblyFixture assemblyFixture, Xunit.Abstractions.ITestOutputHelper testOutputHelper)
+        public FinishedItemServiceTestsFeature(FinishedItemServiceTestsFeature.FixtureData fixtureData, Asimov_API_Tests_XUnitAssemblyFixture assemblyFixture, Xunit.Abstractions.ITestOutputHelper testOutputHelper)
         {
             this._testOutputHelper = testOutputHelper;
             this.TestInitialize();
@@ -40,8 +40,8 @@ namespace Asimov.API.Test.FinishedItem
         public static void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "FinishedItem", "FinishedItemServiceTests", "As a Teacher\r\nI want to complete an Item through application\r\nSo that I can see t" +
-                    "he progress of a course", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "FinishedItem", "FinishedItemServiceTests", "\tAs a Developer\r\n\tI want to complete an Item through API\r\n\tSo that It can be avai" +
+                    "lable for applications.", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -79,38 +79,38 @@ namespace Asimov.API.Test.FinishedItem
         public virtual void FeatureBackground()
         {
 #line 6
-    #line hidden
+ #line hidden
 #line 7
-        testRunner.Given("the Endpoint https://localhost:5001/api/v1/items is available for FinishedItemSer" +
+  testRunner.Given("the Endpoint https://localhost:5001/api/v1/items is available for FinishedItemSer" +
                     "viceTests", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-            TechTalk.SpecFlow.Table table11 = new TechTalk.SpecFlow.Table(new string[] {
+            TechTalk.SpecFlow.Table table10 = new TechTalk.SpecFlow.Table(new string[] {
                         "Id",
                         "Name",
                         "Description",
                         "State"});
-            table11.AddRow(new string[] {
+            table10.AddRow(new string[] {
                         "1",
                         "Algebra",
                         "A branch of Mathematics...",
                         "false"});
 #line 8
-        testRunner.And("A Course is already stored in the table courses", ((string)(null)), table11, "And ");
+  testRunner.Then("A Course is already stored in the table courses", ((string)(null)), table10, "Then ");
 #line hidden
-            TechTalk.SpecFlow.Table table12 = new TechTalk.SpecFlow.Table(new string[] {
+            TechTalk.SpecFlow.Table table11 = new TechTalk.SpecFlow.Table(new string[] {
                         "Id",
                         "Name",
                         "Value",
                         "State",
                         "CourseId"});
-            table12.AddRow(new string[] {
+            table11.AddRow(new string[] {
                         "1",
                         "Video",
                         "https://www.youtube.com/embed/LwCRRUa8yTU",
                         "false",
                         "1"});
 #line 11
-        testRunner.And("A Item is already stored in the table items", ((string)(null)), table12, "And ");
+  testRunner.And("A Item is already stored in the table items", ((string)(null)), table11, "And ");
 #line hidden
         }
         
@@ -130,7 +130,7 @@ namespace Asimov.API.Test.FinishedItem
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Complete Item", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
 #line 16
-    this.ScenarioInitialize(scenarioInfo);
+this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
             bool isFeatureIgnored = default(bool);
@@ -150,38 +150,38 @@ namespace Asimov.API.Test.FinishedItem
             {
                 this.ScenarioStart();
 #line 6
-    this.FeatureBackground();
+ this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table13 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table12 = new TechTalk.SpecFlow.Table(new string[] {
                             "Name",
                             "Value",
                             "State",
                             "CourseId"});
-                table13.AddRow(new string[] {
+                table12.AddRow(new string[] {
                             "Video",
                             "https://www.youtube.com/embed/LwCRRUa8yTU",
                             "true",
                             "1"});
 #line 17
-        testRunner.When("he clicks the complete button of an item 1", ((string)(null)), table13, "When ");
+ testRunner.When("he clicks the complete button of an item 1", ((string)(null)), table12, "When ");
 #line hidden
 #line 20
-        testRunner.Then("A Response with Status 200 is received in Items", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("A Response with Status 200 is received in Items", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-                TechTalk.SpecFlow.Table table14 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table13 = new TechTalk.SpecFlow.Table(new string[] {
                             "Id",
                             "Name",
                             "Value",
                             "State",
                             "CourseId"});
-                table14.AddRow(new string[] {
+                table13.AddRow(new string[] {
                             "1",
                             "Video",
                             "https://www.youtube.com/embed/LwCRRUa8yTU",
                             "true",
                             "1"});
 #line 21
-        testRunner.And("the item will be completed and the progress of a course increases", ((string)(null)), table14, "And ");
+ testRunner.And("the item will be completed and the progress of a course increases", ((string)(null)), table13, "And ");
 #line hidden
             }
             this.ScenarioCleanup();

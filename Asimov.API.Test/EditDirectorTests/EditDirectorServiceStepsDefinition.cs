@@ -12,7 +12,7 @@ using TechTalk.SpecFlow;
 using TechTalk.SpecFlow.Assist;
 using Xunit;
 
-namespace Asimov.API.Test.EditDirectorTests
+namespace Asimov.API.Tests.EditDirectorTests
 {
     [Binding]
     public class EditDirectorServiceStepsDefinition
@@ -40,8 +40,8 @@ namespace Asimov.API.Test.EditDirectorTests
             });
         }
 
-        [Given(@"A Director is already stored in Director's Data")]
-        public async void GivenADirectorIsAlreadyStoredInDirectorsData(Table existingDirectorResource)
+        [Given(@"A Director is already stored in Director's Data Base")]
+        public async void GivenADirectorIsAlreadyStoredInDirectorsDataBase(Table existingDirectorResource)
         {
             var directorUri = new Uri("https://localhost:5001/auth/sign-up/director");
             var resource = existingDirectorResource.CreateSet<RegisterRequestDirector>().First();
@@ -69,9 +69,6 @@ namespace Asimov.API.Test.EditDirectorTests
         public void ThenAMessageOfIsIncludedInResponseBodyOfDirector(string expectedMessage)
         {
             var jsonExpectedMessage = expectedMessage.ToJson();
-            //var actualMessage = Response.Result.Content.ReadAsStringAsync();
-            //var jsonActualMessage = actualMessage.Result;
-            //Assert.Equal(jsonExpectedMessage, jsonActualMessage);
             var actualMessage = Response.Result.Content.ReadAsStringAsync().Result;
             var validMessage = actualMessage.Contains(jsonExpectedMessage);
             Assert.True(validMessage);
