@@ -84,33 +84,33 @@ namespace Asimov.API.Test.FinishedItem
         testRunner.Given("the Endpoint https://localhost:5001/api/v1/items is available for FinishedItemSer" +
                     "viceTests", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-            TechTalk.SpecFlow.Table table9 = new TechTalk.SpecFlow.Table(new string[] {
+            TechTalk.SpecFlow.Table table11 = new TechTalk.SpecFlow.Table(new string[] {
                         "Id",
                         "Name",
                         "Description",
                         "State"});
-            table9.AddRow(new string[] {
+            table11.AddRow(new string[] {
                         "1",
                         "Algebra",
                         "A branch of Mathematics...",
                         "false"});
 #line 8
-        testRunner.And("A Course is already stored in the table courses", ((string)(null)), table9, "And ");
+        testRunner.And("A Course is already stored in the table courses", ((string)(null)), table11, "And ");
 #line hidden
-            TechTalk.SpecFlow.Table table10 = new TechTalk.SpecFlow.Table(new string[] {
+            TechTalk.SpecFlow.Table table12 = new TechTalk.SpecFlow.Table(new string[] {
                         "Id",
                         "Name",
                         "Value",
                         "State",
                         "CourseId"});
-            table10.AddRow(new string[] {
+            table12.AddRow(new string[] {
                         "1",
                         "Video",
                         "https://www.youtube.com/embed/LwCRRUa8yTU",
                         "false",
                         "1"});
 #line 11
-        testRunner.And("A Item is already stored in the table items", ((string)(null)), table10, "And ");
+        testRunner.And("A Item is already stored in the table items", ((string)(null)), table12, "And ");
 #line hidden
         }
         
@@ -152,36 +152,36 @@ namespace Asimov.API.Test.FinishedItem
 #line 6
     this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table11 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table13 = new TechTalk.SpecFlow.Table(new string[] {
                             "Name",
                             "Value",
                             "State",
                             "CourseId"});
-                table11.AddRow(new string[] {
+                table13.AddRow(new string[] {
                             "Video",
                             "https://www.youtube.com/embed/LwCRRUa8yTU",
                             "true",
                             "1"});
 #line 17
-        testRunner.When("he clicks the complete button of an item 1", ((string)(null)), table11, "When ");
+        testRunner.When("he clicks the complete button of an item 1", ((string)(null)), table13, "When ");
 #line hidden
 #line 20
         testRunner.Then("A Response with Status 200 is received in Items", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-                TechTalk.SpecFlow.Table table12 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table14 = new TechTalk.SpecFlow.Table(new string[] {
                             "Id",
                             "Name",
                             "Value",
                             "State",
                             "CourseId"});
-                table12.AddRow(new string[] {
+                table14.AddRow(new string[] {
                             "1",
                             "Video",
                             "https://www.youtube.com/embed/LwCRRUa8yTU",
                             "true",
                             "1"});
 #line 21
-        testRunner.And("the item will be completed and the progress of a course increases", ((string)(null)), table12, "And ");
+        testRunner.And("the item will be completed and the progress of a course increases", ((string)(null)), table14, "And ");
 #line hidden
             }
             this.ScenarioCleanup();
