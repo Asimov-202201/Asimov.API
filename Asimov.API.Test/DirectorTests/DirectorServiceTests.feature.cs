@@ -123,14 +123,14 @@ this.ScenarioInitialize(scenarioInfo);
 #line 6
  this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table5 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table8 = new TechTalk.SpecFlow.Table(new string[] {
                             "FirstName",
                             "LastName",
                             "Age",
                             "Email",
                             "Password",
                             "Phone"});
-                table5.AddRow(new string[] {
+                table8.AddRow(new string[] {
                             "Ricardo",
                             "De la Cruz",
                             "42",
@@ -138,7 +138,7 @@ this.ScenarioInitialize(scenarioInfo);
                             "Ss924@d#p_s",
                             "918274009"});
 #line 11
- testRunner.When("A Post Request is Sent", ((string)(null)), table5, "When ");
+ testRunner.When("A Post Request is Sent", ((string)(null)), table8, "When ");
 #line hidden
 #line 14
  testRunner.Then("A Response with Status 200 is Received", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -183,14 +183,14 @@ this.ScenarioInitialize(scenarioInfo);
 #line 6
  this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table6 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table9 = new TechTalk.SpecFlow.Table(new string[] {
                             "FirstName",
                             "LastName",
                             "Age",
                             "Email",
                             "Password",
                             "Phone"});
-                table6.AddRow(new string[] {
+                table9.AddRow(new string[] {
                             "Luis",
                             "Castillo",
                             "39",
@@ -198,16 +198,16 @@ this.ScenarioInitialize(scenarioInfo);
                             "Pls99281",
                             "992121083"});
 #line 19
- testRunner.Given("A Director is already stored", ((string)(null)), table6, "Given ");
+ testRunner.Given("A Director is already stored", ((string)(null)), table9, "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table7 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table10 = new TechTalk.SpecFlow.Table(new string[] {
                             "FirstName",
                             "LastName",
                             "Age",
                             "Email",
                             "Password",
                             "Phone"});
-                table7.AddRow(new string[] {
+                table10.AddRow(new string[] {
                             "Juanito",
                             "Castillo",
                             "40",
@@ -215,7 +215,7 @@ this.ScenarioInitialize(scenarioInfo);
                             "Pls99281",
                             "982182734"});
 #line 22
- testRunner.When("A Post Request is Sent", ((string)(null)), table7, "When ");
+ testRunner.When("A Post Request is Sent", ((string)(null)), table10, "When ");
 #line hidden
 #line 25
  testRunner.Then("A Response with Status 400 is Received", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");

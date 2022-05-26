@@ -83,18 +83,18 @@ namespace Asimov.API.Tests.ItemTests
 #line 7
   testRunner.Given("the Endpoint https://localhost:5001/api/v1/items is available", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-            TechTalk.SpecFlow.Table table14 = new TechTalk.SpecFlow.Table(new string[] {
+            TechTalk.SpecFlow.Table table17 = new TechTalk.SpecFlow.Table(new string[] {
                         "Id",
                         "Name",
                         "Description",
                         "State"});
-            table14.AddRow(new string[] {
+            table17.AddRow(new string[] {
                         "1",
                         "Algebra",
                         "A branch of Mathematics...",
                         "true"});
 #line 8
-  testRunner.When("A Course is already stored", ((string)(null)), table14, "When ");
+  testRunner.When("A Course is already stored", ((string)(null)), table17, "When ");
 #line hidden
         }
         
@@ -136,34 +136,34 @@ this.ScenarioInitialize(scenarioInfo);
 #line 6
  this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table15 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table18 = new TechTalk.SpecFlow.Table(new string[] {
                             "Name",
                             "Value",
                             "State",
                             "CourseId"});
-                table15.AddRow(new string[] {
+                table18.AddRow(new string[] {
                             "Documentation",
                             "This is the theorem of...",
                             "true",
                             "1"});
 #line 14
- testRunner.When("A Post Request is sent to Item", ((string)(null)), table15, "When ");
+ testRunner.When("A Post Request is sent to Item", ((string)(null)), table18, "When ");
 #line hidden
 #line 17
   testRunner.Then("A Response with Status 200 is received in Item", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-                TechTalk.SpecFlow.Table table16 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table19 = new TechTalk.SpecFlow.Table(new string[] {
                             "Name",
                             "Value",
                             "State",
                             "CourseId"});
-                table16.AddRow(new string[] {
+                table19.AddRow(new string[] {
                             "Documentation",
                             "This is the theorem of...",
                             "true",
                             "1"});
 #line 18
-  testRunner.And("A Item Resource is included in Response Body", ((string)(null)), table16, "And ");
+  testRunner.And("A Item Resource is included in Response Body", ((string)(null)), table19, "And ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -202,18 +202,18 @@ this.ScenarioInitialize(scenarioInfo);
 #line 6
  this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table17 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table20 = new TechTalk.SpecFlow.Table(new string[] {
                             "Name",
                             "Value",
                             "State",
                             "CourseId"});
-                table17.AddRow(new string[] {
+                table20.AddRow(new string[] {
                             "Video",
                             "https://www.youtube.com/...",
                             "true",
                             "-1"});
 #line 24
- testRunner.When("A Post Request is sent to Item", ((string)(null)), table17, "When ");
+ testRunner.When("A Post Request is sent to Item", ((string)(null)), table20, "When ");
 #line hidden
 #line 27
     testRunner.Then("A Response with Status 400 is received in Item", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
