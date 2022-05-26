@@ -40,8 +40,8 @@ namespace Asimov.API.Tests.TeacherTests
             Client = _factory.CreateClient(new WebApplicationFactoryClientOptions {BaseAddress = BaseUri});
         }
         
-        [Given(@"A Director is already Stored")]
-        public async void GivenADirectorIsAlreadyStored(Table existingDirectorResource)
+        [Given(@"A Director is already registered")]
+        public async void GivenADirectorIsAlreadyRegistered(Table existingDirectorResource)
         {
             var directorUri = new Uri("https://localhost:5001/auth/sign-up/director");
             var resource = existingDirectorResource.CreateSet<RegisterRequestDirector>().First();
@@ -69,20 +69,9 @@ namespace Asimov.API.Tests.TeacherTests
         public void ThenAMessageOfIsIncludedInResponseBodyOfTeacher(string expectedMessage)
         {
             var jsonExpectedMessage = expectedMessage.ToJson();
-            //var actualMessage = Response.Result.Content.ReadAsStringAsync();
-            //var jsonActualMessage = actualMessage.Result;
-            //Assert.Equal(jsonExpectedMessage, jsonActualMessage);
             var actualMessage = Response.Result.Content.ReadAsStringAsync().Result;
             var validMessage = actualMessage.Contains(jsonExpectedMessage);
             Assert.True(validMessage);
-        }
-
-        [Given(@"A Teacher is already stored")]
-        public async void GivenATeacherIsAlreadyStored(Table existingTeacherResource)
-        {
-            var resource = existingTeacherResource.CreateSet<RegisterRequestTeacher>().First();
-            var content = new StringContent(resource.ToJson(), Encoding.UTF8, MediaTypeNames.Application.Json);
-            await Client.PostAsync(BaseUri, content);
         }
     }
 }
