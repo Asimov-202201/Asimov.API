@@ -10,7 +10,7 @@
 // ------------------------------------------------------------------------------
 #region Designer generated code
 #pragma warning disable
-namespace Asimov.API.Tests.CourseTests
+namespace Asimov.API.Tests.TeacherTests
 {
     using TechTalk.SpecFlow;
     using System;
@@ -19,7 +19,7 @@ namespace Asimov.API.Tests.CourseTests
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "3.9.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    public partial class CourseServiceTestsFeature : object, Xunit.IClassFixture<CourseServiceTestsFeature.FixtureData>, System.IDisposable
+    public partial class TeacherServiceTestsFeature : object, Xunit.IClassFixture<TeacherServiceTestsFeature.FixtureData>, System.IDisposable
     {
         
         private static TechTalk.SpecFlow.ITestRunner testRunner;
@@ -28,10 +28,10 @@ namespace Asimov.API.Tests.CourseTests
         
         private Xunit.Abstractions.ITestOutputHelper _testOutputHelper;
         
-#line 1 "CourseServiceTests.feature"
+#line 1 "TeacherServiceTests.feature"
 #line hidden
         
-        public CourseServiceTestsFeature(CourseServiceTestsFeature.FixtureData fixtureData, Asimov_API_Tests_XUnitAssemblyFixture assemblyFixture, Xunit.Abstractions.ITestOutputHelper testOutputHelper)
+        public TeacherServiceTestsFeature(TeacherServiceTestsFeature.FixtureData fixtureData, Asimov_API_Tests_XUnitAssemblyFixture assemblyFixture, Xunit.Abstractions.ITestOutputHelper testOutputHelper)
         {
             this._testOutputHelper = testOutputHelper;
             this.TestInitialize();
@@ -40,8 +40,8 @@ namespace Asimov.API.Tests.CourseTests
         public static void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "CourseTests", "CourseServiceTests", "\tAs a Developer\r\n\tI want to add new Course through API\r\n\tSo that It can be availa" +
-                    "ble for applications.", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "TeacherTests", "TeacherServiceTests", "\tAs a Developer\r\n\tI want to register a new Teacher through API\r\n\tSo that It can b" +
+                    "e available for applications.", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -81,7 +81,24 @@ namespace Asimov.API.Tests.CourseTests
 #line 6
  #line hidden
 #line 7
-  testRunner.Given("the Endpoint https://localhost:5001/api/v1/courses is available", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+  testRunner.Given("the Endpoint https://localhost:5001/auth/sign-up/teacher is available", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+            TechTalk.SpecFlow.Table table21 = new TechTalk.SpecFlow.Table(new string[] {
+                        "FirstName",
+                        "LastName",
+                        "Age",
+                        "Email",
+                        "Password",
+                        "Phone"});
+            table21.AddRow(new string[] {
+                        "Ricardo",
+                        "De la Cruz",
+                        "42",
+                        "forman.cruz1212@gmail.com",
+                        "Ss924@d#p_s",
+                        "918274009"});
+#line 8
+  testRunner.And("A Director is already registered", ((string)(null)), table21, "And ");
 #line hidden
         }
         
@@ -90,17 +107,17 @@ namespace Asimov.API.Tests.CourseTests
             this.TestTearDown();
         }
         
-        [Xunit.SkippableFactAttribute(DisplayName="Add Course")]
-        [Xunit.TraitAttribute("FeatureTitle", "CourseServiceTests")]
-        [Xunit.TraitAttribute("Description", "Add Course")]
-        [Xunit.TraitAttribute("Category", "course-adding")]
-        public virtual void AddCourse()
+        [Xunit.SkippableFactAttribute(DisplayName="Register Teacher")]
+        [Xunit.TraitAttribute("FeatureTitle", "TeacherServiceTests")]
+        [Xunit.TraitAttribute("Description", "Register Teacher")]
+        [Xunit.TraitAttribute("Category", "teacher-register")]
+        public virtual void RegisterTeacher()
         {
             string[] tagsOfScenario = new string[] {
-                    "course-adding"};
+                    "teacher-register"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Add Course", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 10
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Register Teacher", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+#line 13
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -123,30 +140,32 @@ this.ScenarioInitialize(scenarioInfo);
 #line 6
  this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table6 = new TechTalk.SpecFlow.Table(new string[] {
-                            "Name",
-                            "Description",
-                            "State"});
-                table6.AddRow(new string[] {
-                            "Algebra",
-                            "A branch of Mathematics...",
-                            "true"});
-#line 11
- testRunner.When("A Post Request is sent to Course", ((string)(null)), table6, "When ");
-#line hidden
+                TechTalk.SpecFlow.Table table22 = new TechTalk.SpecFlow.Table(new string[] {
+                            "Point",
+                            "FirstName",
+                            "LastName",
+                            "Age",
+                            "Email",
+                            "Password",
+                            "Phone",
+                            "DirectorId"});
+                table22.AddRow(new string[] {
+                            "100",
+                            "Alexandra",
+                            "Ortega",
+                            "32",
+                            "alexita.12@gmail.com",
+                            "pl012KsQ",
+                            "911029382",
+                            "1"});
 #line 14
-  testRunner.Then("A Response with Status 200 is received in Course", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.When("A Post Request is sent to Teacher", ((string)(null)), table22, "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table7 = new TechTalk.SpecFlow.Table(new string[] {
-                            "Name",
-                            "Description",
-                            "State"});
-                table7.AddRow(new string[] {
-                            "Algebra",
-                            "A branch of Mathematics...",
-                            "true"});
-#line 15
-  testRunner.And("A Course Resource is included in Response Body", ((string)(null)), table7, "And ");
+#line 17
+   testRunner.Then("A Response with Status 200 is received in Teacher", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+#line 18
+   testRunner.And("A Message of \"Registration successful.\" is included in Response Body of Teacher", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -159,12 +178,12 @@ this.ScenarioInitialize(scenarioInfo);
             
             public FixtureData()
             {
-                CourseServiceTestsFeature.FeatureSetup();
+                TeacherServiceTestsFeature.FeatureSetup();
             }
             
             void System.IDisposable.Dispose()
             {
-                CourseServiceTestsFeature.FeatureTearDown();
+                TeacherServiceTestsFeature.FeatureTearDown();
             }
         }
     }

@@ -10,7 +10,7 @@
 // ------------------------------------------------------------------------------
 #region Designer generated code
 #pragma warning disable
-namespace Asimov.API.Tests.ItemTests
+namespace Asimov.API.Tests.DirectorTests
 {
     using TechTalk.SpecFlow;
     using System;
@@ -19,7 +19,7 @@ namespace Asimov.API.Tests.ItemTests
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "3.9.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    public partial class ItemServiceTestsFeature : object, Xunit.IClassFixture<ItemServiceTestsFeature.FixtureData>, System.IDisposable
+    public partial class DirectorServiceTestsFeature : object, Xunit.IClassFixture<DirectorServiceTestsFeature.FixtureData>, System.IDisposable
     {
         
         private static TechTalk.SpecFlow.ITestRunner testRunner;
@@ -28,10 +28,10 @@ namespace Asimov.API.Tests.ItemTests
         
         private Xunit.Abstractions.ITestOutputHelper _testOutputHelper;
         
-#line 1 "ItemServiceTests.feature"
+#line 1 "DirectorServiceTests.feature"
 #line hidden
         
-        public ItemServiceTestsFeature(ItemServiceTestsFeature.FixtureData fixtureData, Asimov_API_Tests_XUnitAssemblyFixture assemblyFixture, Xunit.Abstractions.ITestOutputHelper testOutputHelper)
+        public DirectorServiceTestsFeature(DirectorServiceTestsFeature.FixtureData fixtureData, Asimov_API_Tests_XUnitAssemblyFixture assemblyFixture, Xunit.Abstractions.ITestOutputHelper testOutputHelper)
         {
             this._testOutputHelper = testOutputHelper;
             this.TestInitialize();
@@ -40,8 +40,8 @@ namespace Asimov.API.Tests.ItemTests
         public static void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "ItemTests", "ItemServiceTests", "\tAs a Developer\r\n\tI want to add new Item through API\r\n\tSo that It can be availabl" +
-                    "e for applications.", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "DirectorTests", "DirectorServiceTests", "\tAs a Developer\r\n\tI want to register a new Director through API\r\n\tSo that It can " +
+                    "be available for applications.", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -81,20 +81,7 @@ namespace Asimov.API.Tests.ItemTests
 #line 6
  #line hidden
 #line 7
-  testRunner.Given("the Endpoint https://localhost:5001/api/v1/items is available", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line hidden
-            TechTalk.SpecFlow.Table table17 = new TechTalk.SpecFlow.Table(new string[] {
-                        "Id",
-                        "Name",
-                        "Description",
-                        "State"});
-            table17.AddRow(new string[] {
-                        "1",
-                        "Algebra",
-                        "A branch of Mathematics...",
-                        "true"});
-#line 8
-  testRunner.When("A Course is already stored", ((string)(null)), table17, "When ");
+  testRunner.Given("the Endpoint https://localhost:5001/auth/sign-up/director", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
         }
         
@@ -103,17 +90,17 @@ namespace Asimov.API.Tests.ItemTests
             this.TestTearDown();
         }
         
-        [Xunit.SkippableFactAttribute(DisplayName="Add Item")]
-        [Xunit.TraitAttribute("FeatureTitle", "ItemServiceTests")]
-        [Xunit.TraitAttribute("Description", "Add Item")]
-        [Xunit.TraitAttribute("Category", "item-adding")]
-        public virtual void AddItem()
+        [Xunit.SkippableFactAttribute(DisplayName="Sign-up Director")]
+        [Xunit.TraitAttribute("FeatureTitle", "DirectorServiceTests")]
+        [Xunit.TraitAttribute("Description", "Sign-up Director")]
+        [Xunit.TraitAttribute("Category", "director-register")]
+        public virtual void Sign_UpDirector()
         {
             string[] tagsOfScenario = new string[] {
-                    "item-adding"};
+                    "director-register"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Add Item", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 13
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Sign-up Director", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+#line 10
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -136,50 +123,44 @@ this.ScenarioInitialize(scenarioInfo);
 #line 6
  this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table18 = new TechTalk.SpecFlow.Table(new string[] {
-                            "Name",
-                            "Value",
-                            "State",
-                            "CourseId"});
-                table18.AddRow(new string[] {
-                            "Documentation",
-                            "This is the theorem of...",
-                            "true",
-                            "1"});
+                TechTalk.SpecFlow.Table table8 = new TechTalk.SpecFlow.Table(new string[] {
+                            "FirstName",
+                            "LastName",
+                            "Age",
+                            "Email",
+                            "Password",
+                            "Phone"});
+                table8.AddRow(new string[] {
+                            "Ricardo",
+                            "De la Cruz",
+                            "42",
+                            "fernan.82@outlook.com",
+                            "Ss924@d#p_s",
+                            "918274009"});
+#line 11
+ testRunner.When("A Post Request is Sent", ((string)(null)), table8, "When ");
+#line hidden
 #line 14
- testRunner.When("A Post Request is sent to Item", ((string)(null)), table18, "When ");
+ testRunner.Then("A Response with Status 200 is Received", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 17
-  testRunner.Then("A Response with Status 200 is received in Item", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-                TechTalk.SpecFlow.Table table19 = new TechTalk.SpecFlow.Table(new string[] {
-                            "Name",
-                            "Value",
-                            "State",
-                            "CourseId"});
-                table19.AddRow(new string[] {
-                            "Documentation",
-                            "This is the theorem of...",
-                            "true",
-                            "1"});
-#line 18
-  testRunner.And("A Item Resource is included in Response Body", ((string)(null)), table19, "And ");
+#line 15
+ testRunner.And("A Message of \"Registration successful.\" is included in Response Body", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }
             this.ScenarioCleanup();
         }
         
-        [Xunit.SkippableFactAttribute(DisplayName="Add Item with Invalid Course")]
-        [Xunit.TraitAttribute("FeatureTitle", "ItemServiceTests")]
-        [Xunit.TraitAttribute("Description", "Add Item with Invalid Course")]
-        [Xunit.TraitAttribute("Category", "item-adding-Invalid")]
-        public virtual void AddItemWithInvalidCourse()
+        [Xunit.SkippableFactAttribute(DisplayName="Sign-up Director with existing Email")]
+        [Xunit.TraitAttribute("FeatureTitle", "DirectorServiceTests")]
+        [Xunit.TraitAttribute("Description", "Sign-up Director with existing Email")]
+        [Xunit.TraitAttribute("Category", "director-register")]
+        public virtual void Sign_UpDirectorWithExistingEmail()
         {
             string[] tagsOfScenario = new string[] {
-                    "item-adding-Invalid"};
+                    "director-register"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Add Item with Invalid Course", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 23
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Sign-up Director with existing Email", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+#line 18
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -202,24 +183,46 @@ this.ScenarioInitialize(scenarioInfo);
 #line 6
  this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table20 = new TechTalk.SpecFlow.Table(new string[] {
-                            "Name",
-                            "Value",
-                            "State",
-                            "CourseId"});
-                table20.AddRow(new string[] {
-                            "Video",
-                            "https://www.youtube.com/...",
-                            "true",
-                            "-1"});
-#line 24
- testRunner.When("A Post Request is sent to Item", ((string)(null)), table20, "When ");
+                TechTalk.SpecFlow.Table table9 = new TechTalk.SpecFlow.Table(new string[] {
+                            "FirstName",
+                            "LastName",
+                            "Age",
+                            "Email",
+                            "Password",
+                            "Phone"});
+                table9.AddRow(new string[] {
+                            "Luis",
+                            "Castillo",
+                            "39",
+                            "fernan.82@outlook.com",
+                            "Pls99281",
+                            "992121083"});
+#line 19
+ testRunner.Given("A Director is already stored", ((string)(null)), table9, "Given ");
 #line hidden
-#line 27
-    testRunner.Then("A Response with Status 400 is received in Item", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+                TechTalk.SpecFlow.Table table10 = new TechTalk.SpecFlow.Table(new string[] {
+                            "FirstName",
+                            "LastName",
+                            "Age",
+                            "Email",
+                            "Password",
+                            "Phone"});
+                table10.AddRow(new string[] {
+                            "Juanito",
+                            "Castillo",
+                            "40",
+                            "fernan.82@outlook.com",
+                            "Pls99281",
+                            "982182734"});
+#line 22
+ testRunner.When("A Post Request is Sent", ((string)(null)), table10, "When ");
 #line hidden
-#line 28
-    testRunner.And("A message of \"Invalid Course\" is included in Response Body", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 25
+ testRunner.Then("A Response with Status 400 is Received", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+#line 26
+ testRunner.And("A Message of \"Email fernan.82@outlook.com is already taken.\" is included in Respo" +
+                        "nse Body", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -232,12 +235,12 @@ this.ScenarioInitialize(scenarioInfo);
             
             public FixtureData()
             {
-                ItemServiceTestsFeature.FeatureSetup();
+                DirectorServiceTestsFeature.FeatureSetup();
             }
             
             void System.IDisposable.Dispose()
             {
-                ItemServiceTestsFeature.FeatureTearDown();
+                DirectorServiceTestsFeature.FeatureTearDown();
             }
         }
     }

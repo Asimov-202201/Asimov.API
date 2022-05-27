@@ -15,7 +15,7 @@ using TechTalk.SpecFlow;
 using TechTalk.SpecFlow.Assist;
 using Xunit;
 
-namespace Asimov.API.Test.AnnouncementTests
+namespace Asimov.API.Tests.AnnouncementTests
 {
     [Binding]
     public class AnnouncementServiceStepsDefinition
@@ -36,17 +36,15 @@ namespace Asimov.API.Test.AnnouncementTests
         [Given(@"the Endpoint https://localhost:(.*)/api/v(.*)/announcements is available")]
         public void GivenTheEndpointHttpsLocalhostApiVAnnouncementsIsAvailable(int port, int version)
         {
-            BaseUri = new Uri($"https://localhost:{port}/api/{version}/announcements");
+            BaseUri = new Uri($"https://localhost:{port}/api/v{version}/announcements");
             Client = _factory.CreateClient(new WebApplicationFactoryClientOptions {BaseAddress = BaseUri});
         }
-        
-        [Given(@"A Director is already stored")]
-        public async void GivenADirectorIsAlreadyStored(Table existingDirectorResource)
+        [Given(@"A Director is already registered in Director's Data")]
+        public async void GivenADirectorIsAlreadyRegisteredInDirectorsData(Table existingDirectorResource)
         {
             var categoryUri = new Uri("https://localhost:5001/auth/sign-up/director");
             var resource = existingDirectorResource.CreateSet<RegisterRequestDirector>().First();
             var content = new StringContent(resource.ToJson(), Encoding.UTF8, MediaTypeNames.Application.Json);
-            Console.WriteLine("hello");
             var directorResponse = Client.PostAsync(categoryUri, content);
             if (directorResponse.Result.IsSuccessStatusCode)
             {
@@ -65,6 +63,14 @@ namespace Asimov.API.Test.AnnouncementTests
             Response = Client.PostAsync(BaseUri, content);
         }
 
+        [Then(@"A Response with Status (.*) is received in Announcement")]
+        public void ThenAResponseWithStatusIsReceivedInAnnouncement(int expectedStatus)
+        {
+            var expectedStatusCode = ((HttpStatusCode) expectedStatus).ToString();
+            var actualStatusCode = Response.Result.StatusCode.ToString();
+            Assert.Equal(expectedStatusCode, actualStatusCode);
+        }
+        
         [Then(@"A Announcement Resource is included in Response Body")]
         public async void ThenAAnnouncementResourceIsIncludedInResponseBody(Table expectedAnnouncementResource)
         {
@@ -75,23 +81,6 @@ namespace Asimov.API.Test.AnnouncementTests
             var jsonExpectedResource = expectedResource.ToJson();
             var jsonActualResource = resource.ToJson();
             Assert.Equal(jsonExpectedResource, jsonActualResource);
-        }
-
-        [Then(@"A Response with Status (.*) is received in Announcement")]
-        public void ThenAResponseWithStatusIsReceivedInAnnouncement(int expectedStatus)
-        {
-            var expectedStatusCode = ((HttpStatusCode) expectedStatus).ToString();
-            var actualStatusCode = Response.Result.StatusCode.ToString();
-            Assert.Equal(expectedStatusCode, actualStatusCode);
-        }
-
-        [Then(@"A Message of ""(.*)"" is included in Response Body of Announcement")]
-        public async void ThenAMessageOfIsIncludedInResponseBodyOfAnnouncement(string expectedMessage)
-        {
-            var actualMessage = await Response.Result.Content.ReadAsStringAsync();
-            var jsonExpectedMessage = expectedMessage.ToJson();
-            var jsonActualMessage = actualMessage.ToJson();
-            Assert.Equal(jsonExpectedMessage, jsonActualMessage);
         }
     }
 }

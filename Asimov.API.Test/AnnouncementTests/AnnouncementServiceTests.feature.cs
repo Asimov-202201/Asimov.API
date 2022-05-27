@@ -10,7 +10,7 @@
 // ------------------------------------------------------------------------------
 #region Designer generated code
 #pragma warning disable
-namespace Asimov.API.Test.AnnouncementTests
+namespace Asimov.API.Tests.AnnouncementTests
 {
     using TechTalk.SpecFlow;
     using System;
@@ -28,10 +28,10 @@ namespace Asimov.API.Test.AnnouncementTests
         
         private Xunit.Abstractions.ITestOutputHelper _testOutputHelper;
         
-#line 1 "AnnouncementServiceTest.feature"
+#line 1 "AnnouncementServiceTests.feature"
 #line hidden
         
-        public AnnouncementServiceTestsFeature(AnnouncementServiceTestsFeature.FixtureData fixtureData, Asimov_API_Test_XUnitAssemblyFixture assemblyFixture, Xunit.Abstractions.ITestOutputHelper testOutputHelper)
+        public AnnouncementServiceTestsFeature(AnnouncementServiceTestsFeature.FixtureData fixtureData, Asimov_API_Tests_XUnitAssemblyFixture assemblyFixture, Xunit.Abstractions.ITestOutputHelper testOutputHelper)
         {
             this._testOutputHelper = testOutputHelper;
             this.TestInitialize();
@@ -40,8 +40,8 @@ namespace Asimov.API.Test.AnnouncementTests
         public static void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "AnnouncementTests", "AnnouncementServiceTests", "As a Director\r\nI want to add new Announcement through Application\r\nSo that It can" +
-                    " be available to all teachers", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "AnnouncementTests", "AnnouncementServiceTests", "\tAs a Developer\r\n\tI want to add new Announcement through API\r\n\tSo that It can be " +
+                    "available for applications.", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -79,12 +79,11 @@ namespace Asimov.API.Test.AnnouncementTests
         public virtual void FeatureBackground()
         {
 #line 6
-    #line hidden
+ #line hidden
 #line 7
-        testRunner.Given("the Endpoint https://localhost:5001/api/v1/announcements is available", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+  testRunner.Given("the Endpoint https://localhost:5001/api/v1/announcements is available", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
             TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
-                        "Id",
                         "FirstName",
                         "LastName",
                         "Age",
@@ -92,7 +91,6 @@ namespace Asimov.API.Test.AnnouncementTests
                         "Password",
                         "Phone"});
             table1.AddRow(new string[] {
-                        "1",
                         "Ricardo",
                         "De la Cruz",
                         "42",
@@ -100,7 +98,7 @@ namespace Asimov.API.Test.AnnouncementTests
                         "Ss924@d#p_s",
                         "918274009"});
 #line 8
-        testRunner.And("A Director is already stored", ((string)(null)), table1, "And ");
+  testRunner.And("A Director is already registered in Director\'s Data", ((string)(null)), table1, "And ");
 #line hidden
         }
         
@@ -120,7 +118,7 @@ namespace Asimov.API.Test.AnnouncementTests
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Add Announcement", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
 #line 13
-    this.ScenarioInitialize(scenarioInfo);
+this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
             bool isFeatureIgnored = default(bool);
@@ -140,7 +138,7 @@ namespace Asimov.API.Test.AnnouncementTests
             {
                 this.ScenarioStart();
 #line 6
-    this.FeatureBackground();
+ this.FeatureBackground();
 #line hidden
                 TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
                             "Title",
@@ -151,10 +149,10 @@ namespace Asimov.API.Test.AnnouncementTests
                             "New competences to be added",
                             "1"});
 #line 14
-        testRunner.When("A Post Request to Announcement is sent", ((string)(null)), table2, "When ");
+ testRunner.When("A Post Request to Announcement is sent", ((string)(null)), table2, "When ");
 #line hidden
 #line 17
-        testRunner.Then("A Response with Status 200 is received in Announcement", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("A Response with Status 200 is received in Announcement", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
                 TechTalk.SpecFlow.Table table3 = new TechTalk.SpecFlow.Table(new string[] {
                             "Title",
@@ -165,59 +163,7 @@ namespace Asimov.API.Test.AnnouncementTests
                             "New competences to be added",
                             "1"});
 #line 18
-        testRunner.And("A Announcement Resource is included in Response Body", ((string)(null)), table3, "And ");
-#line hidden
-            }
-            this.ScenarioCleanup();
-        }
-        
-        [Xunit.SkippableFactAttribute(DisplayName="Add Announcement with Invalid Director")]
-        [Xunit.TraitAttribute("FeatureTitle", "AnnouncementServiceTests")]
-        [Xunit.TraitAttribute("Description", "Add Announcement with Invalid Director")]
-        public virtual void AddAnnouncementWithInvalidDirector()
-        {
-            string[] tagsOfScenario = ((string[])(null));
-            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Add Announcement with Invalid Director", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 22
-    this.ScenarioInitialize(scenarioInfo);
-#line hidden
-            bool isScenarioIgnored = default(bool);
-            bool isFeatureIgnored = default(bool);
-            if ((tagsOfScenario != null))
-            {
-                isScenarioIgnored = tagsOfScenario.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
-            }
-            if ((this._featureTags != null))
-            {
-                isFeatureIgnored = this._featureTags.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
-            }
-            if ((isScenarioIgnored || isFeatureIgnored))
-            {
-                testRunner.SkipScenario();
-            }
-            else
-            {
-                this.ScenarioStart();
-#line 6
-    this.FeatureBackground();
-#line hidden
-                TechTalk.SpecFlow.Table table4 = new TechTalk.SpecFlow.Table(new string[] {
-                            "Title",
-                            "Description",
-                            "DirectorId"});
-                table4.AddRow(new string[] {
-                            "Meeting 2",
-                            "Updating competences",
-                            "-1"});
-#line 23
-        testRunner.When("A Post Request to Announcement is sent", ((string)(null)), table4, "When ");
-#line hidden
-#line 26
-        testRunner.Then("A Response with Status 400 is received in Announcement", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-#line 27
-        testRunner.And("A Message of \"Invalid Director\" is included in Response Body of Announcement", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("A Announcement Resource is included in Response Body", ((string)(null)), table3, "And ");
 #line hidden
             }
             this.ScenarioCleanup();

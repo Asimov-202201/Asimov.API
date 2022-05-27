@@ -4,6 +4,8 @@
         <TargetFramework>net5.0</TargetFramework>
 
         <IsPackable>false</IsPackable>
+
+        <RootNamespace>Asimov.API.Tests</RootNamespace>
     </PropertyGroup>
 
     <ItemGroup>
@@ -29,11 +31,22 @@
     </ItemGroup>
 
     <ItemGroup>
-      <UpToDateCheckInput Remove="ItemTests\ItemServiceTests.feature" />
+      <Compile Update="DirectorTest\DirectorServiceTests.feature.cs">
+        <DependentUpon>DirectorServiceTests.feature</DependentUpon>
+        <AutoGen>true</AutoGen>
+        <DesignTime>true</DesignTime>
+        <Visible>true</Visible>
+      </Compile>
     </ItemGroup>
 
     <ItemGroup>
-      <UpToDateCheckBuild Remove="ItemTests\ItemServiceTests.feature.cs" />
+      <UpToDateCheckInput Remove="TeacherTests\TeacherServiceTests.feature" />
+      <UpToDateCheckInput Remove="AnnouncementTests\AnnouncementServiceTests.feature" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <UpToDateCheckBuild Remove="TeacherTests\TeacherServiceTests.feature.cs" />
+      <UpToDateCheckBuild Remove="AnnouncementTests\AnnouncementServiceTests.feature.cs" />
     </ItemGroup>
 
 </Project>

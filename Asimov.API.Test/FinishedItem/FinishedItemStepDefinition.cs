@@ -14,7 +14,7 @@ using TechTalk.SpecFlow;
 using TechTalk.SpecFlow.Assist;
 using Xunit;
 
-namespace Asimov.API.Test.FinishedItem
+namespace Asimov.API.Tests.FinishedItem
 {
     [Binding]
     public class FinishedItemStepDefinition
@@ -39,7 +39,7 @@ namespace Asimov.API.Test.FinishedItem
             Client = _factory.CreateClient(new WebApplicationFactoryClientOptions {BaseAddress = BaseUri});
         }
 
-        [Given(@"A Course is already stored in the table courses")]
+        [Then(@"A Course is already stored in the table courses")]
         public async void GivenACourseIsAlreadyStored(Table existingCourseResource)
         {
             var courseUri = new Uri("https://localhost:5001/api/v1/courses");
@@ -51,7 +51,7 @@ namespace Asimov.API.Test.FinishedItem
             Course = existingCourse;
         }
         
-        [Given(@"A Item is already stored in the table items")]
+        [Then(@"A Item is already stored in the table items")]
         public async void GivenAItemIsAlreadyStoredInTheTableItems(Table existingItemResource)
         {
             var itemUri = new Uri("https://localhost:5001/api/v1/items");
@@ -62,15 +62,12 @@ namespace Asimov.API.Test.FinishedItem
             var existingItem = JsonConvert.DeserializeObject<ItemResource>(itemResponseData);
             Item = existingItem;
         }
-
-
-
+        
         [When(@"he clicks the complete button of an item (.*)")]
         public void WhenHeClicksTheCompleteButtonOfAnItem(int idItem, Table updateItemResource)
         {
             var resource = updateItemResource.CreateSet<SaveItemResource>().First();
             var content = new StringContent(resource.ToJson(), Encoding.UTF8, MediaTypeNames.Application.Json);
-            //Response = Client.PutAsync(new Uri(BaseUri, idItem.ToString()), content);
             Response = Client.PutAsync(new Uri($"https://localhost:5001/api/v1/items/{idItem}"), content);
         }
         

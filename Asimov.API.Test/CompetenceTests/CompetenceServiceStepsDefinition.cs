@@ -13,7 +13,7 @@ using TechTalk.SpecFlow;
 using TechTalk.SpecFlow.Assist;
 using Xunit;
 
-namespace Asimov.API.Test.CompetenceTests
+namespace Asimov.API.Tests.CompetenceTests
 {
     [Binding]
     public class CompetenceServiceStepsDefinition
@@ -35,7 +35,6 @@ namespace Asimov.API.Test.CompetenceTests
             BaseUri = new Uri($"https://localhost:{port}/api/v{version}/competences");
             Client = _factory.CreateClient(new WebApplicationFactoryClientOptions {BaseAddress = BaseUri});
         }
-
         
         [When(@"A Post Request to Competence is sent")]
         public void WhenAPostRequestToCompetenceIsSent(Table saveCompetenceResource)
