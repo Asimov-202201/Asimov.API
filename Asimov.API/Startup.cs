@@ -71,11 +71,11 @@ namespace Asimov.API
 
             services.Configure<AppSettings>(Configuration.GetSection("AppSettings"));
 
-            services.AddDbContext<AppDbContext>(options =>
+            services.AddDbContext<AppDbContext>(option =>
             {
-                options.UseInMemoryDatabase("asimov_db");
+                option.UseInMemoryDatabase("Asimov-API");
             });
-            
+
             services.AddScoped<IDirectorRepository, DirectorRepository>();
             services.AddScoped<IDirectorService, DirectorService>();
             services.AddScoped<IAnnouncementRepository, AnnouncementRepository>();

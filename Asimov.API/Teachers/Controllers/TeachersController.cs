@@ -27,20 +27,18 @@ namespace Asimov.API.Teachers.Controllers
            _mapper = mapper;
        }
        
-       [AllowAnonymous]
        [HttpPost("/auth/sign-in/teacher")]
        public async Task<IActionResult> Authenticate(AuthenticateRequest request)
        {
            var response = await _teacherService.Authenticate(request);
            return Ok(response);
        }
-
-       [AllowAnonymous]
+       
        [HttpPost("/auth/sign-up/teacher")]
        public async Task<IActionResult> Register(RegisterRequestTeacher request)
        {
            await _teacherService.RegisterAsync(request);
-           return Ok(new {message = "Registration successful."});
+           return Ok( new { message = "Registration successful."});
        }
         
        [HttpGet]
@@ -63,14 +61,14 @@ namespace Asimov.API.Teachers.Controllers
        public async Task<IActionResult> Update(int id, UpdateRequestTeacher request)
        {
            await _teacherService.UpdateAsync(id, request);
-           return Ok(new {message = "User Updated Successfully."});
+           return Ok(new { message = "User Updated successful."});
        }
 
        [HttpDelete("{id}")]
        public async Task<IActionResult> Delete(int id)
        {
            await _teacherService.DeleteAsync(id);
-           return Ok(new {message = "User Deleted successfully."});
+           return Ok(new { message = "User Deleted successful."});
        }
     }
 }

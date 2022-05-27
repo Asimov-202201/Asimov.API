@@ -27,6 +27,9 @@ namespace Asimov.API.Shared.Persistence.Contexts
         {
             _configuration = configuration;
         }
+
+       
+        
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);
