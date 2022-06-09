@@ -144,6 +144,7 @@ namespace Asimov.API.Shared.Persistence.Contexts
             builder.Entity<Course>().Property(p => p.Id).IsRequired().ValueGeneratedOnAdd();
             builder.Entity<Course>().Property(p => p.Name).IsRequired().HasMaxLength(30);
             builder.Entity<Course>().Property(p => p.Description).IsRequired().HasMaxLength(500);
+            builder.Entity<Course>().Property(p => p.Grade).IsRequired().HasMaxLength(10);
             builder.Entity<Course>().Property(p => p.State).IsRequired();
             
             builder.Entity<Course>()
@@ -152,15 +153,15 @@ namespace Asimov.API.Shared.Persistence.Contexts
                 .HasForeignKey(p => p.CourseId);
 
             builder.Entity<Course>().HasData(
-                new Course {Id = 1, Name = "Algebra", Description = "is a branch of mathematics that uses not only numbers and symbols but also letters to solve operations", State = false}, 
-                new Course {Id = 2, Name = "Trigonometry", Description = "is a branch of mathematics, whose etymological meaning is measurement of triangles.", State = false},
-                new Course {Id = 3, Name = "Biology", Description = "is the science that studies living beings and their characteristics, including its origin, evolution and Page 2 its properties, nutrition, morphogenesis, reproduction", State = false},
-                new Course {Id = 4, Name = "Arithmetic", Description = "is the branch of mathematics which studies are numbers and basic operations done with them: addition, subtraction, multiplication and division.", State = false},
-                new Course {Id = 5, Name = "Geography", Description = "is the science that studies and describes the environment around us and gives us information that helps us to know and understand. It is based on the analysis of the physical, social and economic elements that coincide in a specific place and time.", State = false},
-                new Course {Id = 6, Name = "Universal history", Description = "The term World History gathering facts and situations that have developed around the context of the human being, from the appearance of man until today. ... The writing was an event that accelerated the evolution of humanity.", State = false},
-                new Course {Id = 7, Name = "Physical", Description = "is an exact science that studies how the universe taking into account four fundamental properties that are energy, matter, time and space, how they interact and affect each other works.", State = false},
-                new Course {Id = 8, Name = "Anatomy", Description = " is a science that studies the structure of living beings, that is, the shape, topography, location, arrangement and relationship of the organs that compose them", State = false},
-                new Course {Id = 9, Name = "chemistry", Description = "is the study of atoms and molecules and their interactions. The chemical studies reactions and physical changes that occur when creating or transformed compounds.", State = false}
+                new Course {Id = 1, Name = "Algebra", Description = "is a branch of mathematics that uses not only numbers and symbols but also letters to solve operations", Grade = "1ro", State = false}, 
+                new Course {Id = 2, Name = "Trigonometry", Description = "is a branch of mathematics, whose etymological meaning is measurement of triangles.", Grade = "2do", State = false},
+                new Course {Id = 3, Name = "Biology", Description = "is the science that studies living beings and their characteristics, including its origin, evolution and Page 2 its properties, nutrition, morphogenesis, reproduction", Grade = "1ro", State = false},
+                new Course {Id = 4, Name = "Arithmetic", Description = "is the branch of mathematics which studies are numbers and basic operations done with them: addition, subtraction, multiplication and division.", Grade = "3ro", State = false},
+                new Course {Id = 5, Name = "Geography", Description = "is the science that studies and describes the environment around us and gives us information that helps us to know and understand. It is based on the analysis of the physical, social and economic elements that coincide in a specific place and time.", Grade = "1ro", State = false},
+                new Course {Id = 6, Name = "Universal history", Description = "The term World History gathering facts and situations that have developed around the context of the human being, from the appearance of man until today. ... The writing was an event that accelerated the evolution of humanity.", Grade = "2do", State = false},
+                new Course {Id = 7, Name = "Physical", Description = "is an exact science that studies how the universe taking into account four fundamental properties that are energy, matter, time and space, how they interact and affect each other works.", Grade = "3ro", State = false},
+                new Course {Id = 8, Name = "Anatomy", Description = " is a science that studies the structure of living beings, that is, the shape, topography, location, arrangement and relationship of the organs that compose them", Grade = "2do", State = false},
+                new Course {Id = 9, Name = "chemistry", Description = "is the study of atoms and molecules and their interactions. The chemical studies reactions and physical changes that occur when creating or transformed compounds.", Grade = "2do", State = false}
             );
             
             

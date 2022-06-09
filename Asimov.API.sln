@@ -2,6 +2,10 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Asimov.API", "Asimov.API\Asimov.API.csproj", "{D16A454D-0BDC-4B86-97A7-2359DB271DEB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Asimov.API.Tests", "Asimov.API.Tests\Asimov.API.Tests.csproj", "{D82E0D7F-EBAB-46D6-B806-F0A6CE3684A1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Asimov.API.SystemTests", "Asimov.API.SystemTests\Asimov.API.SystemTests.csproj", "{10074E6F-7CAA-47E2-87DB-D0569E02AA46}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +16,13 @@ Global
 		{D16A454D-0BDC-4B86-97A7-2359DB271DEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D16A454D-0BDC-4B86-97A7-2359DB271DEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D16A454D-0BDC-4B86-97A7-2359DB271DEB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D82E0D7F-EBAB-46D6-B806-F0A6CE3684A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D82E0D7F-EBAB-46D6-B806-F0A6CE3684A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D82E0D7F-EBAB-46D6-B806-F0A6CE3684A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D82E0D7F-EBAB-46D6-B806-F0A6CE3684A1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{10074E6F-7CAA-47E2-87DB-D0569E02AA46}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{10074E6F-7CAA-47E2-87DB-D0569E02AA46}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{10074E6F-7CAA-47E2-87DB-D0569E02AA46}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{10074E6F-7CAA-47E2-87DB-D0569E02AA46}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

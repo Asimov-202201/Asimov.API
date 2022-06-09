@@ -53,6 +53,7 @@ namespace Asimov.API.Courses.Services
                 return new CourseResponse("Course not found");
             existingCourse.Name = course.Name;
             existingCourse.Description = course.Description;
+            existingCourse.Grade = course.Grade;
             existingCourse.State = course.State;
 
             try

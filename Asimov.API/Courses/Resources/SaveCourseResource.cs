@@ -13,6 +13,10 @@ namespace Asimov.API.Courses.Resources
         public string Description { get; set; }
         
         [Required]
+        [MaxLength(10)]
+        public string Grade { get; set; }
+        
+        [Required]
         public bool State { get; set; }
     }
 }
