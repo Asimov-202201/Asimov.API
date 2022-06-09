@@ -12,6 +12,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace Asimov.API.Directors.Controllers
 {
     [Produces("application/json")]
+    [AuthorizeDirector]
     [ApiController]
     [Route("/api/v1/[controller]")]
     public class DirectorsController : ControllerBase
@@ -25,14 +26,15 @@ namespace Asimov.API.Directors.Controllers
             _mapper = mapper;
         }
 
-        //[AllowAnonymous]
+        [AllowAnonymous]
         [HttpPost("/auth/sign-in/director")]
         public async Task<IActionResult> Authenticate(AuthenticateRequest request)
         {
             var response = await _directorService.Authenticate(request);
             return Ok(response);
         }
-        
+
+        [AllowAnonymous]
         [HttpPost("/auth/sign-up/director")]
         public async Task<IActionResult> Register(RegisterRequestDirector request)
         {
@@ -40,6 +42,7 @@ namespace Asimov.API.Directors.Controllers
             return Ok(new {message = "Registration successful."});
         }
         
+        [AllowAnonymous]
         [HttpGet]
         public async Task<IActionResult> GetAll()
         {

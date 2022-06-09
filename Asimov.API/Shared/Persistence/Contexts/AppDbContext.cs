@@ -27,9 +27,6 @@ namespace Asimov.API.Shared.Persistence.Contexts
         {
             _configuration = configuration;
         }
-
-       
-        
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);
@@ -144,7 +141,6 @@ namespace Asimov.API.Shared.Persistence.Contexts
             builder.Entity<Course>().Property(p => p.Id).IsRequired().ValueGeneratedOnAdd();
             builder.Entity<Course>().Property(p => p.Name).IsRequired().HasMaxLength(30);
             builder.Entity<Course>().Property(p => p.Description).IsRequired().HasMaxLength(500);
-            builder.Entity<Course>().Property(p => p.Grade).IsRequired().HasMaxLength(10);
             builder.Entity<Course>().Property(p => p.State).IsRequired();
             
             builder.Entity<Course>()

@@ -23,8 +23,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <_ContentIncludedByDefault Remove="Announcements\appsettings.Development.json" />
-      <_ContentIncludedByDefault Remove="Announcements\appsettings.json" />
+      <Folder Include="Courses" />
     </ItemGroup>
 
 </Project>

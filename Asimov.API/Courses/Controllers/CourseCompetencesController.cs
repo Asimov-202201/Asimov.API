@@ -11,6 +11,7 @@ namespace Asimov.API.Courses.Controllers
 {
     [Produces("application/json")]
     [ApiController]
+    [AuthorizeTeacher]
     [Route("/api/v1/courses/{courseId}/competences")]
     public class CourseCompetencesController : ControllerBase
     {
